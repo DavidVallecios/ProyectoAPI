@@ -4,14 +4,14 @@ const reservaController = require('../controllers/reserva')
 
 router.post('/add', reservaController.registrarse)
 
-router.get('/reserva/:user', reservaController.mostrarReserva)
+router.get('/reserva/:id', reservaController.mostrarReserva)
 
 router.put('/modificar/:id', reservaController.modificar)
 
-router.get('/:user', reservaController.mostrarxUser)
+router.get('/obtener/:id', reservaController.mostrarxUser)
 
-router.get('/', reservaController.mostrar)
+router.get('/obtener', reservaController.mostrar)
 
-router.delete('/delete/:id', reservaController.eliminar)
+router.delete('/delete/:user/:id', reservaController.eliminar)
 
 module.exports = router;

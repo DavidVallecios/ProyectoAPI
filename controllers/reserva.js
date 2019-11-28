@@ -102,8 +102,8 @@ const mostrar = async (req, res) =>{
 }
 
 const mostrarxUser = async (req, res) =>{
-    const { user } = req.params;
-    const usuario_log = await User.findOne({username: user})
+    const { id } = req.params;
+    const usuario_log = await User.findById({_id: id})
     const misReservas = await Reserva.find({creada_por: usuario_log._id})
     res.status(200).json(misReservas);
 }

@@ -6,6 +6,6 @@ router.get('/lab', labController.mostrar)
 router.post('/lab', labController.add)
 router.delete('/lab/:nombre', labController.borrar)
 router.put('lab/:nombre', labController.actualizar)
-router.get('/lab/:nombre', labController.mostrarUno)
+router.get('/lab/:id', labController.mostrarUno)
 
 module.exports = router;

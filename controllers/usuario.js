@@ -2,11 +2,11 @@ const User = require('../models/user')
 
 //MODIFICAR
 const modificar = async (req, res) => {
-    const { user } = req.params;
+    const { id } = req.params;
     await User.update({
         username: user
     }, req.body);
-    const usuario = await User.findOne({username: user})
+    const usuario = await User.findById({_id: id})
     res.status(200).json(usuario)
 }
 const mostrar = async (req, res) => {

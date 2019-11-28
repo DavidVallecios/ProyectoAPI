@@ -4,13 +4,13 @@ const router = express.Router();
 const usuarioController = require('../controllers/usuario')
 
 //verificar que sean validos los datos al registrarse
-router.post('/users', usuarioController.crear)
+router.post('/signup', usuarioController.crear)
 
 //actualizar el rol del usuario
-router.put('/users/:user', usuarioController.modificar)
+router.put('/edit/:id', usuarioController.modificar)
 
 //mostrar todos los usuarios
-router.get('/users/', usuarioController.mostrar)
+router.get('/users/:id', usuarioController.mostrar)
 
 //mostrar un usuario
 router.get('/users/:user', usuarioController.mostrarUno)
